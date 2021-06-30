@@ -7,7 +7,10 @@ rollbar.settings:
       label: 'Whether Rollbar is enabled'
     access_token:
       type: string
-      label: 'The rollbar API access token'
+      label: 'The rollbar API access token (Server)'
+    access_token_frontend:
+      type: string
+      label: 'The rollbar API access token (Client)'
     capture_uncaught:
       type: boolean
       label: 'The rollbar captureUncaught option'

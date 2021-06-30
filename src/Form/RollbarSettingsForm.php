@@ -38,8 +38,15 @@ class RollbarSettingsForm extends ConfigFormBase {
 
     $form['access_token'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Access Token'),
+      '#title' => $this->t('Access Token (Server)'),
       '#default_value' => $config->get('access_token'),
+      '#required' => TRUE,
+    ];
+
+    $form['access_token_frontend'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Access Token (Client)'),
+      '#default_value' => $config->get('access_token_frontend'),
       '#required' => TRUE,
     ];
 
@@ -109,6 +116,7 @@ class RollbarSettingsForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->config('rollbar.settings')
       ->set('access_token', $form_state->getValue('access_token'))
+      ->set('access_token_frontend', $form_state->getValue('access_token_frontend'))
       ->set('enabled', $form_state->getValue('enabled'))
       ->set('capture_uncaught', $form_state->getValue('capture_uncaught'))
       ->set('capture_unhandled_rejections', $form_state->getValue('capture_unhandled_rejections'))

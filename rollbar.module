@@ -18,7 +18,7 @@ function rollbar_page_attachments_alter(array &$attachments) {
   // We only add the library and settings to the page if enabled.
   if (!empty($config) && $config->get('enabled')) {
     $settings = [
-      'access_token' => $config->get('access_token'),
+      'access_token' => $config->get('access_token_frontend'),
       'capture_uncaught' => $config->get('capture_uncaught'),
       'capture_unhandled_rejections' => $config->get('capture_unhandled_rejections'),
       'environment' => $config->get('environment'),
