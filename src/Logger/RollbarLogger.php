@@ -56,8 +56,9 @@ class RollbarLogger implements LoggerInterface {
   protected function init() {
     $token = $this->config->get('access_token');
     $environment = $this->config->get('environment');
+    $enabled = $this->config->get('enabled');
 
-    if (empty($token) || empty($environment)) {
+    if (empty($token) || empty($environment) || !$enabled) {
       return FALSE;
     }
 
