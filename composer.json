@@ -1,11 +1,12 @@
 {
   "name": "drupal/rollbar",
-  "description": "Rollbar integration for Drupal 8.",
+  "description": "Rollbar integration for Drupal.",
   "type": "drupal-module",
   "license": "GPL 2.0+",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "rollbar/rollbar": "^1.0"
+    "rollbar/rollbar": "^2.1",
+    "drupal/core": "^8.8.0 || ^9.0"
   }
 }
