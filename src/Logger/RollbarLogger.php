@@ -77,6 +77,9 @@ class RollbarLogger implements LoggerInterface {
       return;
     }
     $enabled_log_levels = $this->config->get('log_level');
+    if (!is_array($enabled_log_levels)) {
+        return;
+    }
     $log_level_condition = !in_array($level, $enabled_log_levels);
     $omit_channel = array_map('trim', explode(";", $this->config->get('channels')));
     $omit_channel_condition = isset($context['channel']) && in_array($context['channel'], $omit_channel);
