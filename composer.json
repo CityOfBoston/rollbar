@@ -1,12 +1,12 @@
 {
-  "name": "drupal/rollbar",
-  "description": "Rollbar integration for Drupal.",
+  "name": "cityofboston/rollbar",
+  "description": "Drupal10 compatible: Rollbar integration for Drupal.",
   "type": "drupal-module",
   "license": "GPL 2.0+",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
     "rollbar/rollbar": "^2.1 || ^3.0",
-    "drupal/core": "^8.8.0 || ^9.0"
+    "drupal/core": "^8.8.0 || ^9.0 || ^10.0"
   }
 }

@@ -2,5 +2,5 @@ name: Rollbar
 description: Integration with Rollbar
 type: module
 configure: rollbar.settings
-core_version_requirement: ^8.8.0 || ^9.0
+core_version_requirement: ^8.8.0 || ^9.0 || ^10
 package: Services
